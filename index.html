@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Senator Tony Nwoye — Constituency Website (Prototype)</title>
+	<meta name="description" content="Prototype constituency website for Senator Tony Nwoye — design system and starter layout." />
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-inner">
+			<a href="/" class="brand">
+				<img src="assets/logos/logo-placeholder.png" alt="Senator Tony Nwoye" class="brand__logo">
+				<span class="brand__text">Senator Tony Nwoye</span>
+			</a>
+
+			<button class="nav-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="nav-toggle__bar"></span>
+				<span class="nav-toggle__bar"></span>
+				<span class="nav-toggle__bar"></span>
+			</button>
+
+			<nav id="site-navigation" class="site-nav" aria-label="Main navigation">
+				<ul class="nav-list">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Activities</a></li>
+					<li><a href="#">Projects</a></li>
+					<li><a href="#">Scholarships</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+				<div class="nav-actions">
+					<a href="#" class="btn btn--primary">Get Involved</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<main class="site-main">
+		<section class="hero section">
+			<div class="container hero-inner">
+				<div class="hero-content">
+					<h1 class="hero-title">Building a stronger Anambra North</h1>
+					<p class="lead">A clean, responsive prototype layout — content placeholders used until official copy and assets are provided.</p>
+					<div class="hero-actions">
+						<a href="#" class="btn btn--primary">Explore Projects</a>
+						<a href="#" class="btn btn--ghost">Learn More</a>
+					</div>
+				</div>
+				<div class="hero-media">
+					<img src="assets/images/hero-placeholder.jpg" alt="Portrait placeholder" class="hero-image">
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="container">
+				<h2 class="section-heading">Placeholder: Constituency Projects</h2>
+				<p class="section-sub">Cards and components will be used here to showcase projects.</p>
+
+				<div class="grid grid--cards">
+					<article class="card">
+						<img src="assets/images/project-1.jpg" alt="Project placeholder" class="card__media">
+						<div class="card__body">
+							<h3 class="card__title">Project Title</h3>
+							<p class="card__excerpt">Short description placeholder for the project. Replace with real content later.</p>
+							<a class="btn btn--link" href="#">View Details →</a>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="assets/images/project-2.jpg" alt="Project placeholder" class="card__media">
+						<div class="card__body">
+							<h3 class="card__title">Project Title</h3>
+							<p class="card__excerpt">Short description placeholder for the project.</p>
+							<a class="btn btn--link" href="#">View Details →</a>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="assets/images/project-3.jpg" alt="Project placeholder" class="card__media">
+						<div class="card__body">
+							<h3 class="card__title">Project Title</h3>
+							<p class="card__excerpt">Short description placeholder for the project.</p>
+							<a class="btn btn--link" href="#">View Details →</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-inner">
+			<div class="footer-brand">© <span id="year"></span> Senator Tony Nwoye — Prototype</div>
+			<nav class="footer-nav">
+				<ul>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Accessibility</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</footer>
+
+	<script src="js/main.js" defer></script>
+</body>
+</html>
