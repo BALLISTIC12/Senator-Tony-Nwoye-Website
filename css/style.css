@@ -519,6 +519,10 @@ p {
 	display: block;
 }
 
+.hl-line--dark {
+	color: #111111;
+}
+
 .hl-line--muted {
 	color: var(--color-primary-dark);
 }
