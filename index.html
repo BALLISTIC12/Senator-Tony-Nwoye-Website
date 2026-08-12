@@ -3,15 +3,32 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Senator Tony Nwoye — Constituency Website (Prototype)</title>
-	<meta name="description" content="Prototype constituency website for Senator Tony Nwoye — design system and starter layout." />
+
+	<title>Senator Tony Nwoye — Constituency Website</title>
+
+	<meta
+		name="description"
+		content="Official constituency website for Senator Tony Nwoye representing Anambra North."
+	>
+
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+	<!-- =========================
+	     HEADER
+	========================= -->
 	<header class="site-header">
 		<div class="container header-inner">
+
 			<a href="/" class="brand" aria-label="Senator Tony Nwoye home">
-				<img src="assets/logos/senator-logo.svg" alt="Senator Tony Nwoye logo" class="brand__logo">
+				<img
+					src="assets/logos/senator-logo.svg"
+					alt="Senator Tony Nwoye logo"
+					class="brand__logo"
+				>
+
 				<span class="brand__meta">
 					<strong class="brand__title">SENATOR</strong>
 					<span class="brand__name">TONY NWOYE</span>
@@ -19,129 +36,335 @@
 				</span>
 			</a>
 
-			<button class="nav-toggle" aria-controls="site-navigation" aria-expanded="false" aria-label="Toggle navigation">
+			<button
+				class="nav-toggle"
+				aria-controls="site-navigation"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
 				<span class="nav-toggle__bar"></span>
 				<span class="nav-toggle__bar"></span>
 				<span class="nav-toggle__bar"></span>
 			</button>
 
-			<nav id="site-navigation" class="site-nav" aria-label="Main navigation">
+			<nav
+				id="site-navigation"
+				class="site-nav"
+				aria-label="Main navigation"
+			>
 				<ul class="nav-list" role="menubar">
-					<li role="none"><a role="menuitem" class="active" href="#">Home</a></li>
-					<li role="none"><a role="menuitem" href="#">About</a></li>
-					<li role="none"><a role="menuitem" href="#">Activities</a></li>
-					<li role="none"><a role="menuitem" href="#">Projects</a></li>
-					<li role="none"><a role="menuitem" href="#">Scholarships &amp; Programs</a></li>
-					<li role="none"><a role="menuitem" href="#">News</a></li>
-					<li role="none"><a role="menuitem" href="#">Contact</a></li>
+					<li role="none">
+						<a role="menuitem" class="active" href="#">Home</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">About</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">Activities</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">Projects</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">Scholarships &amp; Programs</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">News</a>
+					</li>
+
+					<li role="none">
+						<a role="menuitem" href="#">Contact</a>
+					</li>
 				</ul>
+
 				<div class="nav-actions">
 					<a href="#" class="btn btn--primary">Get Involved</a>
 				</div>
 			</nav>
+
 		</div>
 	</header>
 
+
+	<!-- =========================
+	     MAIN
+	========================= -->
 	<main class="site-main">
-		<section class="hero section" aria-labelledby="hero-title">
-			<div class="container">
-				<div class="hero-grid">
-					<div class="hero-left">
-						<p class="eyebrow">Working for quality representation</p>
+
+		<!-- =========================
+		     HERO
+		========================= -->
+		<section class="hero" aria-labelledby="hero-title">
+
+			<!-- Main visual/content portion -->
+			<div class="hero-main">
+				<div class="container hero-main-inner">
+
+					<!-- LEFT: Hero copy -->
+					<div class="hero-content">
+
+						<p class="eyebrow">
+							Working for quality representation
+						</p>
+
 						<h1 id="hero-title" class="hero-headline">
 							<span class="hl-line hl-line--muted">BUILDING</span>
 							<span class="hl-line hl-line--muted">A STRONGER</span>
 							<span class="hl-line hl-line--accent">ANAMBRA NORTH</span>
 						</h1>
-						<p class="hero-support">Working for quality representation,
-							sustainable development and a
-							better future for our people.</p>
+
+						<p class="hero-support">
+							Working for quality representation, sustainable
+							development and a better future for our people.
+						</p>
+
 						<div class="hero-ctas">
-							<a href="#" class="btn btn--ghost">Explore Projects</a>
-							<a href="#" class="btn btn--primary">Get Involved</a>
+							<a href="#" class="btn btn--ghost">
+								Explore Projects
+							</a>
+
+							<a href="#" class="btn btn--primary">
+								Get Involved
+							</a>
 						</div>
-						<div class="social-row" aria-hidden="true">
+
+						<div class="social-row" aria-label="Social media links">
 							<span class="social-dot"></span>
 							<span class="social-dot"></span>
 							<span class="social-dot"></span>
 							<span class="social-label">Follow Us</span>
 						</div>
+
 					</div>
-					<div class="hero-right">
+
+
+					<!-- RIGHT: Senator visual -->
+					<div class="hero-visual">
+
 						<div class="portrait-wrap">
-							<div class="portrait-shape" aria-hidden="true"></div>
-							<img src="assets/images/senator/senator-portrait.svg" alt="Portrait placeholder" class="portrait-image">
+
+							<!-- Decorative green shape -->
+							<div
+								class="portrait-shape"
+								aria-hidden="true"
+							></div>
+
+							<!-- Portrait -->
+							<div class="portrait-frame">
+								<img
+									src="assets/images/senator/senator-portrait.svg"
+									alt="Senator Tony Nwoye portrait"
+									class="portrait-image"
+								>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+			<!-- =========================
+			     HERO STATISTICS
+			     IMPORTANT:
+			     This remains INSIDE .hero
+			========================= -->
+			<div class="hero-stats">
+
+				<div class="container stats-inner">
+
+					<div class="stat">
+						<div class="stat-icon" aria-hidden="true">
+							★
+						</div>
+
+						<div class="stat-value">70+</div>
+
+						<div class="stat-desc">
+							Bills &amp; Motions<br>
+							Sponsored
 						</div>
 					</div>
+
+
+					<div class="stat">
+						<div class="stat-icon" aria-hidden="true">
+							▰
+						</div>
+
+						<div class="stat-value">50+</div>
+
+						<div class="stat-desc">
+							Constituency<br>
+							Projects
+						</div>
+					</div>
+
+
+					<div class="stat">
+						<div class="stat-icon" aria-hidden="true">
+							●
+						</div>
+
+						<div class="stat-value">25,000+</div>
+
+						<div class="stat-desc">
+							Lives<br>
+							Impacted
+						</div>
+					</div>
+
+
+					<div class="stat">
+						<div class="stat-icon" aria-hidden="true">
+							⬟
+						</div>
+
+						<div class="stat-value">7</div>
+
+						<div class="stat-desc">
+							Local Government<br>
+							Areas
+						</div>
+					</div>
+
 				</div>
+
 			</div>
 
-			<div class="stats-bar">
-				<div class="container stats-inner">
-					<div class="stat">
-						<div class="stat-icon" aria-hidden="true"></div>
-						<div class="stat-value">70+</div>
-						<div class="stat-desc">Bills &amp; Motions<br>Sponsored</div>
-					</div>
-					<div class="stat">
-						<div class="stat-icon" aria-hidden="true"></div>
-						<div class="stat-value">50+</div>
-						<div class="stat-desc">Constituency<br>Projects</div>
-					</div>
-					<div class="stat">
-						<div class="stat-icon" aria-hidden="true"></div>
-						<div class="stat-value">25,000+</div>
-						<div class="stat-desc">Lives<br>Impacted</div>
-					</div>
-					<div class="stat">
-						<div class="stat-icon" aria-hidden="true"></div>
-						<div class="stat-value">7</div>
-						<div class="stat-desc">Local Government<br>Areas</div>
-					</div>
-				</div>
-			</div>
 		</section>
 
-		<section class="section">
+
+		<!-- =========================
+		     PROJECTS
+		========================= -->
+		<section class="projects section">
+
 			<div class="container">
-				<h2 class="section-heading">Placeholder: Constituency Projects</h2>
-				<p class="section-sub">Cards and components will be used here to showcase projects.</p>
+
+				<h2 class="section-heading">
+					Featured Constituency Projects
+				</h2>
+
+				<p class="section-sub">
+					Explore projects and initiatives supporting communities
+					across Anambra North.
+				</p>
+
 
 				<div class="grid grid--cards">
-					<article class="card">
-						<img src="assets/images/project-1.svg" alt="Project placeholder" class="card__media">
-						<div class="card__body">
-							<h3 class="card__title">Project Title</h3>
-							<p class="card__excerpt">Short description placeholder for the project. Replace with real content later.</p>
-							<a class="btn btn--link" href="#">View Details →</a>
-						</div>
-					</article>
 
 					<article class="card">
-						<img src="assets/images/project-2.svg" alt="Project placeholder" class="card__media">
+
+						<img
+							src="assets/images/project-1.svg"
+							alt="Constituency project placeholder"
+							class="card__media"
+						>
+
 						<div class="card__body">
-							<h3 class="card__title">Project Title</h3>
-							<p class="card__excerpt">Short description placeholder for the project.</p>
-							<a class="btn btn--link" href="#">View Details →</a>
+
+							<h3 class="card__title">
+								Project Title
+							</h3>
+
+							<p class="card__excerpt">
+								Short description placeholder for the
+								constituency project.
+							</p>
+
+							<a class="btn btn--link" href="#">
+								View Details →
+							</a>
+
 						</div>
+
 					</article>
 
+
 					<article class="card">
-						<img src="assets/images/project-3.svg" alt="Project placeholder" class="card__media">
+
+						<img
+							src="assets/images/project-2.svg"
+							alt="Constituency project placeholder"
+							class="card__media"
+						>
+
 						<div class="card__body">
-							<h3 class="card__title">Project Title</h3>
-							<p class="card__excerpt">Short description placeholder for the project.</p>
-							<a class="btn btn--link" href="#">View Details →</a>
+
+							<h3 class="card__title">
+								Project Title
+							</h3>
+
+							<p class="card__excerpt">
+								Short description placeholder for the
+								constituency project.
+							</p>
+
+							<a class="btn btn--link" href="#">
+								View Details →
+							</a>
+
 						</div>
+
 					</article>
+
+
+					<article class="card">
+
+						<img
+							src="assets/images/project-3.svg"
+							alt="Constituency project placeholder"
+							class="card__media"
+						>
+
+						<div class="card__body">
+
+							<h3 class="card__title">
+								Project Title
+							</h3>
+
+							<p class="card__excerpt">
+								Short description placeholder for the
+								constituency project.
+							</p>
+
+							<a class="btn btn--link" href="#">
+								View Details →
+							</a>
+
+						</div>
+
+					</article>
+
 				</div>
+
 			</div>
+
 		</section>
+
 	</main>
 
+
+	<!-- =========================
+	     FOOTER
+	========================= -->
 	<footer class="site-footer">
+
 		<div class="container footer-inner">
-			<div class="footer-brand">© <span id="year"></span> Senator Tony Nwoye — Prototype</div>
+
+			<div class="footer-brand">
+				© <span id="year"></span>
+				Senator Tony Nwoye — Prototype
+			</div>
+
 			<nav class="footer-nav">
 				<ul>
 					<li><a href="#">Privacy</a></li>
@@ -149,9 +372,13 @@
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
+
 		</div>
+
 	</footer>
 
+
 	<script src="js/main.js" defer></script>
+
 </body>
 </html>
