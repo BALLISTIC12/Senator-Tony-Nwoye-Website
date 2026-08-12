@@ -1241,3 +1241,170 @@ p {
 
 	border: 0;
 }
+/* ==================================================
+   HERO COMPOSITION REFINEMENT
+   Bring statistics into the initial viewport
+================================================== */
+
+@media (min-width: 801px) {
+
+	/* Make the main hero much more compact */
+	.hero-main-inner {
+		min-height: 410px;
+		padding-top: 28px;
+		padding-bottom: 20px;
+		gap: 30px;
+	}
+
+	/* Keep the text prominent without making it too tall */
+	.hero-headline {
+		font-size: clamp(2.8rem, 4vw, 4rem);
+		line-height: 0.93;
+		margin-bottom: 18px;
+	}
+
+	.hero-support {
+		margin-bottom: 20px;
+		max-width: 570px;
+		line-height: 1.5;
+	}
+
+	.hero-ctas {
+		margin-bottom: 14px;
+	}
+
+	/* Compress the portrait area */
+	.hero-visual {
+		min-height: 380px;
+	}
+
+	.portrait-wrap {
+		height: 390px;
+	}
+
+	/* Decorative shape should frame the portrait,
+	   not create a huge vertical composition */
+	.portrait-shape {
+		width: 370px;
+		height: 400px;
+		top: 0;
+		right: 0;
+	}
+
+	.portrait-frame {
+		width: 305px;
+		height: 385px;
+		padding: 18px;
+	}
+
+	/* Keep statistics compact so they remain attached
+	   to the hero and visible in the first viewport */
+	.stat {
+		min-height: 105px;
+		padding: 14px 12px;
+	}
+
+	.stat-icon {
+		margin-bottom: 5px;
+	}
+
+	.stat-value {
+		font-size: 1.25rem;
+	}
+
+	.stat-desc {
+		font-size: 0.82rem;
+	}
+}
+
+
+/* ==================================================
+   MOBILE HERO COMPOSITION
+================================================== */
+
+@media (max-width: 800px) {
+
+	.hero-main-inner {
+		padding-top: 28px;
+		padding-bottom: 12px;
+		gap: 4px;
+	}
+
+	.hero-headline {
+		font-size: clamp(2.35rem, 9vw, 3.1rem);
+		line-height: 0.94;
+		margin-bottom: 18px;
+	}
+
+	.hero-support {
+		margin-bottom: 18px;
+		line-height: 1.5;
+	}
+
+	.hero-ctas {
+		margin-bottom: 12px;
+	}
+
+	.hero-visual {
+		min-height: 300px;
+		margin-top: 0;
+	}
+
+	.portrait-wrap {
+		height: 300px;
+	}
+
+	.portrait-shape {
+		width: 270px;
+		height: 290px;
+		top: 5px;
+		right: 0;
+	}
+
+	.portrait-frame {
+		width: 225px;
+		height: 285px;
+		padding: 12px;
+	}
+
+	.stat {
+		min-height: 105px;
+		padding: 14px 8px;
+	}
+}
+
+
+@media (max-width: 480px) {
+
+	.hero-main-inner {
+		padding-top: 24px;
+		padding-bottom: 8px;
+	}
+
+	.hero-headline {
+		font-size: 2.25rem;
+	}
+
+	.hero-visual {
+		min-height: 270px;
+	}
+
+	.portrait-wrap {
+		height: 270px;
+	}
+
+	.portrait-shape {
+		width: 240px;
+		height: 255px;
+	}
+
+	.portrait-frame {
+		width: 200px;
+		height: 250px;
+		padding: 10px;
+	}
+
+	.stat {
+		min-height: 100px;
+	}
+}
