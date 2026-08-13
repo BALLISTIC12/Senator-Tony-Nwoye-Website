@@ -11,9 +11,9 @@
 :root {
 
 	/* Colors */
-	--color-primary-dark: #0b4f2b;
-	--color-primary: #17683a;
-	--color-gold: #c89a2e;
+	--color-primary-dark: #062e16;
+	--color-primary: #073818;
+	--color-gold: #db8b00;
 
 	--color-bg: #f7f4ef;
 	--color-text: #1f2326;
@@ -401,6 +401,17 @@ p {
 	background: white;
 }
 
+.btn--gold {
+	background: var(--color-gold);
+	color: #ffffff;
+	border-color: var(--color-gold);
+	box-shadow: var(--shadow-sm);
+}
+
+.btn--gold:hover {
+	background: #c27b00;
+	border-color: #c27b00;
+}
 .btn--link {
 	background: transparent;
 
@@ -579,99 +590,58 @@ p {
 }
 
 
-/* --------------------------------------------------
-   Hero visual
--------------------------------------------------- */
+/* ==================================================
+   SENATOR PORTRAIT
+================================================== */
 
 .hero-visual {
 	display: flex;
-
 	justify-content: center;
-
-	align-items: center;
-
+	align-items: flex-end;
 	position: relative;
-
-	min-height: 500px;
-
+	min-height: 380px;
 	z-index: 1;
 }
 
 .portrait-wrap {
 	position: relative;
-
 	width: min(100%, 500px);
-
-	height: 500px;
-
+	height: 410px;
 	display: flex;
-
-	align-items: center;
-
+	align-items: flex-end;
 	justify-content: center;
 }
 
 
-/*
-   Decorative green shape.
-
-   This is intentionally behind the portrait,
-   rather than becoming a giant green circle
-   around the entire visual.
-*/
+/* Green curved shape behind the senator */
 
 .portrait-shape {
 	position: absolute;
-
-	width: 430px;
-	height: 470px;
-
-	right: -5px;
-	top: 18px;
-
+	width: 470px;
+	height: 430px;
+	right: -10px;
+	bottom: -20px;
 	background: var(--color-primary-dark);
-
-	border-radius: 48% 42% 48% 52%;
-
-	transform: rotate(-6deg);
-
+	border-radius: 56% 44% 50% 50%;
+	transform: rotate(-7deg);
 	z-index: 0;
 }
 
 
-/*
-   Portrait frame.
-
-   The actual senator image will eventually replace
-   the placeholder SVG.
-*/
-
-.portrait-frame {
-	position: relative;
-
-	width: 350px;
-	height: 450px;
-
-	background: #ffffff;
-
-	border-radius: 18px;
-
-	padding: 24px;
-
-	box-shadow: 0 18px 40px rgba(9, 14, 12, 0.10);
-
-	z-index: 2;
-}
+/* Actual senator cutout */
 
 .portrait-image {
-	width: 100%;
-	height: 100%;
-
-	object-fit: cover;
-
-	border-radius: 10px;
+	position: relative;
+	z-index: 2;
+	width: auto;
+	height: 450px;
+	max-width: none;
+	object-fit: contain;
+	object-position: center bottom;
+	display: block;
+	align-self: flex-end;
+	filter: none;
 }
-
 
 /* ==================================================
    HERO STATISTICS
@@ -906,17 +876,17 @@ p {
 	}
 
 	.portrait-wrap {
-		height: 450px;
+		height: 430px;
 	}
 
 	.portrait-shape {
-		width: 380px;
+		width: 410px;
 		height: 420px;
+		right: -5px;
 	}
 
-	.portrait-frame {
-		width: 310px;
-		height: 410px;
+	.portrait-image {
+		height: 445px;
 	}
 }
 
@@ -1040,39 +1010,31 @@ p {
 	/* Portrait */
 
 	.hero-visual {
-
-		min-height: 410px;
-
+		min-height: 300px;
 		order: 2;
-
-		margin-top: 10px;
+		margin-top: 0;
 	}
 
 	.portrait-wrap {
-
-		height: 410px;
-
+		height: 300px;
 		width: 100%;
-
-		max-width: 430px;
+		max-width: 390px;
 	}
 
 	.portrait-shape {
-
-		width: 350px;
-		height: 370px;
-
+		width: 290px;
+		height: 285px;
 		right: 0;
-
-		top: 18px;
+		top: auto;
+		bottom: -5px;
 	}
 
-	.portrait-frame {
-
-		width: 290px;
-		height: 370px;
-
-		padding: 18px;
+	.portrait-image {
+		height: 330px;
+		width: auto;
+		max-width: 90%;
+		object-fit: contain;
+		object-position: center bottom;
 	}
 
 
@@ -1163,33 +1125,26 @@ p {
 
 
 	.hero-visual {
-
-		min-height: 360px;
+		min-height: 270px;
 	}
 
 	.portrait-wrap {
-
-		height: 360px;
+		height: 270px;
+		max-width: 340px;
 	}
 
 	.portrait-shape {
-
-		width: 300px;
-		height: 320px;
-
-		right: -5px;
+		width: 255px;
+		height: 250px;
+		right: -2px;
+		bottom: -2px;
 	}
 
-	.portrait-frame {
-
-		width: 250px;
-		height: 320px;
-
-		padding: 14px;
+	.portrait-image {
+		height: 295px;
+		max-width: 92%;
 	}
-
-
-	.stats-inner {
+.stats-inner {
 
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -1295,12 +1250,6 @@ p {
 		right: 0;
 	}
 
-	.portrait-frame {
-		width: 305px;
-		height: 385px;
-		padding: 18px;
-	}
-
 	/* Keep statistics compact so they remain attached
 	   to the hero and visible in the first viewport */
 	.stat {
@@ -1365,12 +1314,6 @@ p {
 		right: 0;
 	}
 
-	.portrait-frame {
-		width: 225px;
-		height: 285px;
-		padding: 12px;
-	}
-
 	.stat {
 		min-height: 105px;
 		padding: 14px 8px;
@@ -1402,12 +1345,6 @@ p {
 		height: 255px;
 	}
 
-	.portrait-frame {
-		width: 200px;
-		height: 250px;
-		padding: 10px;
-	}
-
 	.stat {
 		min-height: 100px;
 	}
@@ -1434,5 +1371,216 @@ p {
 
 	.nav-list {
 		gap: 30px;
+	}
+}
+/* ==================================================
+   FINAL HERO PORTRAIT COMPOSITION
+   Curved right-edge background + bottom-aligned portrait
+================================================== */
+
+@media (min-width: 801px) {
+
+	/* Keep the hero height we already established,
+	   but remove the bottom breathing room so the
+	   portrait can meet the statistics bar. */
+	.hero-main-inner {
+		padding-bottom: 0;
+		align-items: end;
+	}
+
+	.hero-visual {
+		align-self: stretch;
+		min-height: 380px;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		position: relative;
+		overflow: visible;
+	}
+
+	.portrait-wrap {
+		width: 100%;
+		max-width: 560px;
+
+		height: 100%;
+		min-height: 390px;
+
+		position: relative;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	/*
+	   Large curved green panel.
+
+	   Instead of a circle behind the senator,
+	   this creates the sweeping curved shape
+	   that enters from the right edge.
+	*/
+	.portrait-shape {
+		position: absolute;
+
+		/*
+		   Wide right-edge panel with a concave left edge.
+		   The large horizontal shape extends beyond the
+		   viewport so only its inward-curving edge is visible.
+		*/
+		width: 860px;
+		height: 610px;
+
+		right: -480px;
+		bottom: -70px;
+
+		background: var(--color-primary-dark);
+
+		/* Rounded only on the left side to create the inward arc. */
+		border-radius: 50% 0 0 50%;
+
+		transform: none;
+
+		z-index: 0;
+	}
+
+	/*
+	   Senator sits in front of the green shape
+	   and is anchored directly to the bottom
+	   of the hero.
+	*/
+	.portrait-image {
+		position: absolute;
+
+		z-index: 2;
+
+		bottom: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+
+		height: 455px;
+		width: auto;
+
+		max-width: none;
+
+		object-fit: contain;
+		object-position: center bottom;
+
+		display: block;
+	}
+}
+
+
+/* ==================================================
+   MOBILE PORTRAIT COMPOSITION
+================================================== */
+
+@media (max-width: 800px) {
+
+	.hero-main-inner {
+		padding-bottom: 0;
+		align-items: stretch;
+	}
+
+	.hero-visual {
+		min-height: 300px;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+
+		margin-top: 0;
+
+		overflow: visible;
+	}
+
+	.portrait-wrap {
+		width: 100%;
+		max-width: 390px;
+
+		height: 300px;
+
+		position: relative;
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+
+	/*
+	   On mobile the green element remains curved,
+	   but is kept much tighter so it doesn't
+	   overwhelm the portrait.
+	*/
+	.portrait-shape {
+		position: absolute;
+
+		width: 500px;
+		height: 320px;
+
+		right: -260px;
+		bottom: -45px;
+
+		background: var(--color-primary-dark);
+
+		/* Same inward-curving edge as desktop, scaled for mobile. */
+		border-radius: 50% 0 0 50%;
+
+		transform: none;
+
+		z-index: 0;
+	}
+
+	.portrait-image {
+		position: absolute;
+
+		z-index: 2;
+
+		bottom: 0;
+		left: 50%;
+
+		transform: translateX(-50%);
+
+		height: 325px;
+		width: auto;
+
+		max-width: none;
+
+		object-fit: contain;
+		object-position: center bottom;
+	}
+}
+
+
+/* ==================================================
+   SMALL PHONES
+================================================== */
+
+@media (max-width: 480px) {
+
+	.hero-main-inner {
+		padding-bottom: 0;
+	}
+
+	.hero-visual {
+		min-height: 270px;
+	}
+
+	.portrait-wrap {
+		height: 270px;
+	}
+
+	.portrait-shape {
+		width: 410px;
+		height: 275px;
+
+		right: -220px;
+		bottom: -38px;
+	}
+
+	.portrait-image {
+		height: 295px;
 	}
 }
